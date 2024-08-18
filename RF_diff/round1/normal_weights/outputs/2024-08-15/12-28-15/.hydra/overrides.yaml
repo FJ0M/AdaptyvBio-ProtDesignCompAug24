@@ -1,0 +1,7 @@
+- inference.output_prefix=/projects/cpr_sbmm/people/phr361/AntiAntiPhage/ProteinDesignCompAug/RF_diff/round1/normal_weights/
+- inference.input_pdb=/projects/cpr_sbmm/people/phr361/AntiAntiPhage/ProteinDesignCompAug/wt/6aru.pdb
+- contigmap.contigs=[A568-769/0  50-350]
+- ppi.hotspot_res=[A316,A325,A346,A348,A350,A363,A380,A382,A412,A417,A438,A467]
+- inference.num_designs=50
+- denoiser.noise_scale_ca=0
+- denoiser.noise_scale_frame=0

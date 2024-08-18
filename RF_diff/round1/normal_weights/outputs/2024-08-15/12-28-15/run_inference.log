@@ -1,0 +1,6 @@
+[2024-08-15 12:28:15,581][__main__][INFO] - Found GPU with device_name NVIDIA A100-SXM4-80GB. Will run RFdiffusion on NVIDIA A100-SXM4-80GB
+[2024-08-15 12:28:15,582][rfdiffusion.inference.model_runners][INFO] - Reading checkpoint from /maps/projects/cpr_software/apps/software-src/RFdiffusion/rfdiffusion/inference/../../models/Complex_base_ckpt.pt
+[2024-08-15 12:28:21,249][rfdiffusion.inference.model_runners][INFO] - Loading checkpoint.
+[2024-08-15 12:28:23,963][rfdiffusion.diffusion][INFO] - Using cached IGSO3.
+[2024-08-15 12:28:24,109][__main__][INFO] - Making design /projects/cpr_sbmm/people/phr361/AntiAntiPhage/ProteinDesignCompAug/RF_diff/round1/normal_weights/_0
+[2024-08-15 12:28:24,320][rfdiffusion.inference.model_runners][INFO] - Using contig: ['A568-769/0  50-350']

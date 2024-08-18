@@ -1,0 +1,8 @@
+- inference.output_prefix=/projects/cpr_sbmm/people/phr361/AntiAntiPhage/ProteinDesignCompAug/RF_diff/round1/beta_weights/
+- inference.input_pdb=/projects/cpr_sbmm/people/phr361/AntiAntiPhage/ProteinDesignCompAug/wt/6aru.pdb
+- inference.ckpt_override_path=/projects/cpr_software/apps/software-src/RFdiffusion/models/Complex_beta_ckpt.pt
+- contigmap.contigs=[A311-501/0  150-200]
+- ppi.hotspot_res=[A316,A325,A346,A348,A350,A363,A380,A382,A412,A417,A438,A467]
+- inference.num_designs=50
+- denoiser.noise_scale_ca=0
+- denoiser.noise_scale_frame=0

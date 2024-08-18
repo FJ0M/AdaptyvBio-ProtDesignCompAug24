@@ -23,12 +23,12 @@ set -o errexit # job exit on errors
 module load miniconda3/23.5.2
 conda activate /projects/cpr_software/apps/condaenvs/23.5.2/esmfold
 
-fasta_dir='/projects/cpr_sbmm/people/phr361/AntiAntiPhage/ProteinDesignCompAug/att1/RF_beta/all_fastas'
+fasta_dir='/ProteinDesignCompAug/att1/RF_beta/all_fastas'
 fasta_files=(`ls ${fasta_dir}/`)  ## they will be indexed as 0,1,2,...
 fasta_count=${#fasta_files[@]}
 echo "Number of fastas = ${fasta_count} "
 
-ESM_dir='/projects/cpr_sbmm/people/phr361/AntiAntiPhage/ProteinDesignCompAug/att1/RF_beta/ESM_outputs'  
+ESM_dir='ProteinDesignCompAug/att1/RF_beta/ESM_outputs'  
 mkdir -p ${ESM_dir}
 
 # Calculate the actual task ID considering the offset

@@ -27,7 +27,7 @@ conda activate /projects/cpr_software/apps/condaenvs/23.5.2/AlphaPulldown   # la
 
 
 ### CHANGE to your own work directory
-WORKDIR=/projects/cpr_sbmm/people/phr361/AntiAntiPhage/ProteinDesignCompAug/AlphaPulldown      # where the job output will be stored
+WORKDIR=/ProteinDesignCompAug/AlphaPulldown      # where the job output will be stored
 FASTADIR=${WORKDIR}/fastas   # where your fastas locate
 
 if [ "${SLURM_NODELIST}" == 'cprgpun01fl' ]; then
@@ -44,7 +44,7 @@ run_multimer_jobs.py --mode=pulldown \
     --num_predictions_per_model=1 \
     --output_path=${WORKDIR}/step2-models \
     --data_dir=${AFDB} \
-    --protein_lists=${FASTADIR}/SngA_trim.txt,${FASTADIR}/AF_pulldown.txt \
+    --protein_lists=${FASTADIR}/wt_trim.txt,${FASTADIR}/AF_pulldown.txt \
     --monomer_objects_dir=${WORKDIR}/step1-output \
     --job_index=${SLURM_ARRAY_TASK_ID}
 

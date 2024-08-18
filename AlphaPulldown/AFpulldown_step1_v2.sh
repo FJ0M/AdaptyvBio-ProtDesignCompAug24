@@ -27,7 +27,7 @@ set -o errexit # job exit on errors
 module load miniconda3/23.5.2
 conda activate /projects/cpr_software/apps/condaenvs/23.5.2/AlphaPulldown   # latest version
 ### CHANGE to your own work directory
-WORKDIR=/projects/cpr_sbmm/people/phr361/AntiAntiPhage/ProteinDesignCompAug/AlphaPulldown      # where the job output will be stored
+WORKDIR=/ProteinDesignCompAug/AlphaPulldown      # where the job output will be stored
 FASTADIR=${WORKDIR}/fastas   # where your fastas locate
 
 if [ "${SLURM_NODELIST}" == 'cprgpun01fl' ]; then
@@ -38,7 +38,7 @@ fi
 
 ## Adapted official example, https://github.com/KosinskiLab/AlphaPulldown/blob/main/manuals/example_1.md
 ## 294 sequences in example_1_sequnces.fasta, but only test with 10 as example
-create_individual_features.py --fasta_paths=${FASTADIR}/SngA_trim.fasta,${FASTADIR}/AF_pulldown.fasta  \
+create_individual_features.py --fasta_paths=${FASTADIR}/wt_trim.fasta,${FASTADIR}/AF_pulldown.fasta  \
 			      --data_dir=${AFDB} \
 			      --save_msa_files=False \
 			      --output_dir=${WORKDIR}/step1-output  \

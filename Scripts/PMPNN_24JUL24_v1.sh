@@ -23,7 +23,7 @@ source /opt/software/miniconda/4.12.0/etc/profile.d/conda.sh
 conda activate mlfold
 
 # Path to ProteinMPNN
-protein_mpnn_path=/projects/cpr_sbmm/people/phr361/ProteinMPNN
+protein_mpnn_path=/PATH/TO/ProteinMPNN
 
 # Function to run ProteinMPNN
 run_protein_mpnn() {
@@ -52,8 +52,30 @@ run_protein_mpnn() {
     $cmd
 }
 
+# First working directory
+WORKDIR=/ProteinDesignCompAug/RF_diff/round1/normal_weights
+cd ${WORKDIR}
+
+# Iterate over each PDB file in WORKDIR for normal weights
+for pdb_file in "${WORKDIR}"/*.pdb; do
+    pdb_basename=$(basename "${pdb_file}" .pdb)
+    mkdir -p "${WORKDIR}"/PMPNN
+    mkdir -p "${WORKDIR}"/PMPNN/normal_weights_chainA
+    output_dir="${WORKDIR}/PMPNN/normal_weights_chainA/${pdb_basename}/"
+    run_protein_mpnn "${pdb_file}" "${output_dir}" "false"
+done
+
+# Iterate over each PDB file in WORKDIR for soluble weights
+for pdb_file in "${WORKDIR}"/*.pdb; do
+    pdb_basename=$(basename "${pdb_file}" .pdb)
+    mkdir -p "${WORKDIR}"/PMPNN
+    mkdir -p "${WORKDIR}"/PMPNN/soluble_weights_chainA
+    output_dir="${WORKDIR}/PMPNN/soluble_weights_chainA/${pdb_basename}/"
+    run_protein_mpnn "${pdb_file}" "${output_dir}" "true"
+done
+
 # Change to another working directory (for beta weights)
-WORKDIR=/projects/cpr_sbmm/people/phr361/AntiAntiPhage/ProteinDesignCompAug/RF_diff/round2/beta_weights/
+WORKDIR=/projects/cpr_sbmm/people/phr361/AntiAntiPhage/Shango/AntiSngA/RF_diff/round1/beta_weights/
 cd ${WORKDIR}
 
 # Iterate over each PDB file in WORKDIR for normal weights (beta weights directory)

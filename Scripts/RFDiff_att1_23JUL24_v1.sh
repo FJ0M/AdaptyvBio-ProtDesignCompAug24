@@ -23,7 +23,7 @@ ml miniconda3/23.5.2
 conda activate /projects/cpr_software/apps/condaenvs/23.5.2/SE3nv
 
 # Define input and working directory
-WORKDIR=/projects/cpr_sbmm/people/phr361/AntiAntiPhage/ProteinDesignCompAug
+WORKDIR=/ProteinDesignCompAug
 INPUT_PDB=${WORKDIR}/wt/6aru.pdb
 RFdiff_path=/projects/cpr_software/apps/software-src/RFdiffusion/scripts/run_inference.py
 RFdiff_beta_model_path=/projects/cpr_software/apps/software-src/RFdiffusion/models/Complex_beta_ckpt.pt

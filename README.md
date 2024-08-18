@@ -3,7 +3,7 @@
 Link to competition: https://design.adaptyvbio.com/
 
 ## Pipeline overview:
-![Pipeline overview](./imgs/flow_diagram.png "Pipeline Overview")
+![Pipeline overview](./imgs/flow_diagram2.png "Pipeline Overview")
 
 ### Prerequisites:
 - ProteinMPNN: https://github.com/dauparas/ProteinMPNN

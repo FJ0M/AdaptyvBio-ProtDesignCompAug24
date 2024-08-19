@@ -15,6 +15,8 @@ Link to competition: https://design.adaptyvbio.com/
 - More scaffolds
 - Some sort of energy / forcefield scoring
 - Relaxing the interface
+- MD simulations
+- Higher temperature sampling PMPNN
 
 ### Hardware
 Ran using a A100 GPU HPC server.

@@ -5,6 +5,8 @@ Link to competition: https://design.adaptyvbio.com/
 ## Pipeline overview:
 ![Pipeline overview](./imgs/flow_diagram.png "Pipeline Overview")
 
+Took about 2 days to run it all.
+
 ### Prerequisites:
 - ProteinMPNN: https://github.com/dauparas/ProteinMPNN
 - ESMFold: https://github.com/facebookresearch/esm
